@@ -3,6 +3,7 @@ import {Button, View, StyleSheet, ScrollView, Text} from 'react-native';
 
 import Input from './src/Input';
 import NumList from './src/NumList';
+import MyPicker from './src/MyPicker';
 
 const App = () => {
   const [myTextInput, setMyTextInput] = useState('');
@@ -29,6 +30,7 @@ const App = () => {
 
   return (
     <View style={styles.mainView}>
+      <MyPicker />
       <Input value={myTextInput} onChangeText={onChangeInput} />
       <View style={styles.buttonView}>
         <Button title="Add Text Input" onPress={onAddTextInput} />
@@ -56,14 +58,6 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width: '100%',
-  },
-  mainText: {
-    margin: 20,
-    padding: 20,
-    fontSize: 20,
-    fontWeight: 'normal',
-    color: 'red',
-    backgroundColor: 'pink',
   },
 });
 
