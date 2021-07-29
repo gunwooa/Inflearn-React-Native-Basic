@@ -4,6 +4,7 @@ import {Button, View, StyleSheet, ScrollView, Text} from 'react-native';
 import Input from './src/Input';
 import NumList from './src/NumList';
 import MyPicker from './src/MyPicker';
+import MySlider from './src/MySlider';
 
 const App = () => {
   const [myTextInput, setMyTextInput] = useState('');
@@ -30,6 +31,7 @@ const App = () => {
 
   return (
     <View style={styles.mainView}>
+      <MySlider />
       <MyPicker />
       <Input value={myTextInput} onChangeText={onChangeInput} />
       <View style={styles.buttonView}>
