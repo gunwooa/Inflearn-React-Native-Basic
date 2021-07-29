@@ -13,6 +13,7 @@ import NumList from './src/NumList';
 import MyPicker from './src/MyPicker';
 import MySlider from './src/MySlider';
 import iuImgSrc from './assets/iu.jpeg';
+import MyModal from './src/MyModal';
 
 const App = () => {
   const [myTextInput, setMyTextInput] = useState('');
@@ -39,12 +40,13 @@ const App = () => {
 
   return (
     <View style={styles.mainView}>
-      <Image
+      <MyModal />
+      {/* <Image
         style={styles.iuImage}
         source={iuImgSrc}
         resizeMode="contain"
         onLoadEnd={() => alert('굿')}
-      />
+      /> */}
       {/* <MySlider />
       <MyPicker />
       <ActivityIndicator size="large" color="green" animating={true} />
