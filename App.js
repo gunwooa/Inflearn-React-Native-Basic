@@ -5,12 +5,14 @@ import {
   StyleSheet,
   ScrollView,
   ActivityIndicator,
+  Image,
 } from 'react-native';
 
 import Input from './src/Input';
 import NumList from './src/NumList';
 import MyPicker from './src/MyPicker';
 import MySlider from './src/MySlider';
+import iuImgSrc from './assets/iu.jpeg';
 
 const App = () => {
   const [myTextInput, setMyTextInput] = useState('');
@@ -37,7 +39,13 @@ const App = () => {
 
   return (
     <View style={styles.mainView}>
-      <MySlider />
+      <Image
+        style={styles.iuImage}
+        source={iuImgSrc}
+        resizeMode="contain"
+        onLoadEnd={() => alert('굿')}
+      />
+      {/* <MySlider />
       <MyPicker />
       <ActivityIndicator size="large" color="green" animating={true} />
       <Input value={myTextInput} onChangeText={onChangeInput} />
@@ -47,7 +55,7 @@ const App = () => {
       </View>
       <ScrollView style={styles.scrollView}>
         <NumList num={alphabet} delete_={onDeleteTextInput} />
-      </ScrollView>
+      </ScrollView> */}
     </View>
   );
 };
@@ -56,7 +64,7 @@ const styles = StyleSheet.create({
   mainView: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 50,
+    justifyContent: 'center',
     backgroundColor: 'white',
   },
   buttonView: {
@@ -67,6 +75,11 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width: '100%',
+  },
+  iuImage: {
+    width: '100%',
+    height: 400,
+    backgroundColor: 'red',
   },
 });
 
