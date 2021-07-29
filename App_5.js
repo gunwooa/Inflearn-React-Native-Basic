@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import HomeScreen from './src/5_react_navigation/HomeScreen';
 import DetailsScreen from './src/5_react_navigation/DetailsScreen';
+import LogoTitle from './src/5_react_navigation/LogoTitle';
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="Home"
+        headerMode="float"
+        mode="modal"
         screenOptions={{
           headerStyle: {
             backgroundColor: 'pink',
@@ -28,6 +31,7 @@ export default function App() {
           component={HomeScreen}
           options={{
             title: 'Home Screen',
+            headerTitle: () => <LogoTitle />,
           }}
         />
         <Stack.Screen
