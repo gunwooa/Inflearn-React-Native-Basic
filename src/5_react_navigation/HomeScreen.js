@@ -14,6 +14,18 @@ function HomeScreen({navigation}) {
           });
         }}
       />
+      <Button
+        title="header bar 이름 수정!!"
+        onPress={() =>
+          navigation.setOptions({
+            title: '안뇽~',
+            headerStyle: {
+              backgroundColor: 'pink',
+            },
+            headerTintColor: 'red',
+          })
+        }
+      />
     </View>
   );
 }

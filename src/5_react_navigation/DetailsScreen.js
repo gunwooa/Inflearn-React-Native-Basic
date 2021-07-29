@@ -1,9 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
 
 function DetailsScreen({route, navigation}) {
   const {itemId} = route.params;
   const {otherParam} = route.params;
+
+  const headerStyleInit = () => {
+    navigation.setOptions({
+      title: 'Details Screen',
+      headerStyle: {
+        backgroundColor: 'pink',
+      },
+      headerTintColor: 'red',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        color: 'purple',
+      },
+    });
+  };
+
+  useEffect(() => {
+    console.log('뽝');
+
+    headerStyleInit();
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text>Details Screen</Text>
