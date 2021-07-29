@@ -9,12 +9,12 @@ function DetailsScreen({route, navigation}) {
     navigation.setOptions({
       title: 'Details Screen',
       headerStyle: {
-        backgroundColor: 'pink',
+        backgroundColor: 'blue',
       },
-      headerTintColor: 'red',
+      headerTintColor: 'green',
       headerTitleStyle: {
         fontWeight: 'bold',
-        color: 'purple',
+        color: 'yellow',
       },
     });
   };
@@ -22,7 +22,7 @@ function DetailsScreen({route, navigation}) {
   useEffect(() => {
     console.log('뽝');
 
-    headerStyleInit();
+    // headerStyleInit();
   }, []);
 
   return (
