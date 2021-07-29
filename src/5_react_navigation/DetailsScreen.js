@@ -16,13 +16,15 @@ function DetailsScreen({route, navigation}) {
         fontWeight: 'bold',
         color: 'yellow',
       },
+      headerBackTitle: 'BACK',
+      headerBackTitleVisible: false,
     });
   };
 
   useEffect(() => {
     console.log('뽝');
 
-    // headerStyleInit();
+    headerStyleInit();
   }, []);
 
   return (

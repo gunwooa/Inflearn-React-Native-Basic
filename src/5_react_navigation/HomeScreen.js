@@ -1,7 +1,25 @@
-import React from 'react';
-import {View, Text, Button, StyleSheet} from 'react-native';
+import React, {useEffect} from 'react';
+import {useNavigation} from '@react-navigation/native';
 
-function HomeScreen({navigation}) {
+import {View, Text, Button, StyleSheet} from 'react-native';
+import LogoTitle from './LogoTitle';
+
+function HomeScreen() {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({
+      title: 'Home Screen',
+      headerTitle: () => <LogoTitle />,
+      headerRight: () => (
+        <Button
+          title="상세로ㅋ"
+          onPress={() => navigation.navigate('Details')}
+        />
+      ),
+    });
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text>Home Screen</Text>
