@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React, {useState} from 'react';
 import {
   Button,
@@ -8,12 +9,12 @@ import {
   Image,
 } from 'react-native';
 
-import Input from './src/Input';
-import NumList from './src/NumList';
-import MyPicker from './src/MyPicker';
-import MySlider from './src/MySlider';
+import Input from './src/4_react_native_component/Input';
+import NumList from './src/4_react_native_component/NumList';
+import MyPicker from './src/4_react_native_component/MyPicker';
+import MySlider from './src/4_react_native_component/MySlider';
+import MyModal from './src/4_react_native_component/MyModal';
 import iuImgSrc from './assets/iu.jpeg';
-import MyModal from './src/MyModal';
 
 const App = () => {
   const [myTextInput, setMyTextInput] = useState('');

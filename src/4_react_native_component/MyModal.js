@@ -10,7 +10,7 @@ const MyModal = () => {
 
   return (
     <View style={styles.container}>
-      <Button title="Open Modal" onPress={handleModal} />
+      <Button title="Open Modal 🔥" onPress={handleModal} />
 
       <Modal
         visible={isOpenModal}
