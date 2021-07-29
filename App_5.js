@@ -1,24 +1,20 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import * as React from 'react';
+import {Text, View, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import HomeScreen from './src/5_react_navigation/Home';
-import UserScreen from './src/5_react_navigation/User';
+import HomeScreen from './src/5_react_navigation/HomeScreen';
+import DetailsScreen from './src/5_react_navigation/DetailsScreen';
 
 const Stack = createStackNavigator();
 
-const App = () => {
+export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="User" component={UserScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-};
-
-const styles = StyleSheet.create({});
-
-export default App;
+}

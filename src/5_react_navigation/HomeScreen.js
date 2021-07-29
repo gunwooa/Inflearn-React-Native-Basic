@@ -1,17 +1,22 @@
 import React from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
 
-const User = ({navigation}) => {
+function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <Text>User Screen</Text>
+      <Text>Home Screen</Text>
       <Button
-        title="To user Screen"
-        onPress={() => navigation.navigate('Home')}
+        title="Go to Details"
+        onPress={() => {
+          navigation.navigate('Details', {
+            itemId: 86,
+            otherParam: 'anything you want here',
+          });
+        }}
       />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -22,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default User;
+export default HomeScreen;
