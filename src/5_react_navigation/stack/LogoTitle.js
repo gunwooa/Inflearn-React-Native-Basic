@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
-import reactImgSrc from '../../assets/react.png';
+import reactImgSrc from '../../../assets/react.png';
 
 function LogoTitle() {
   return <Image style={styles.container} source={reactImgSrc} />;
