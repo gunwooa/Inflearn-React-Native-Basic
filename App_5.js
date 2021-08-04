@@ -1,27 +1,38 @@
 import React, {useState} from 'react';
-import {View, SafeAreaView, Button, StyleSheet} from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import StackNavigation from './src/5_react_navigation/stack';
 import DrawerNavigation from './src/5_react_navigation/drawer';
+import TabNavigation from './src/5_react_navigation/tab';
 
 const tabButtons = {
   stack: {
     name: 'Stack',
-    color: 'red',
   },
   drawer: {
     name: 'Drawer',
-    color: 'red',
+  },
+  tab: {
+    name: 'Tab',
   },
 };
 
 function App() {
-  const [tab, setTab] = useState('drawer');
+  const [tab, setTab] = useState('tab');
 
   const renderTabView = tabKey => {
     if (tabKey === 'stack') {
       return <StackNavigation />;
     } else if (tabKey === 'drawer') {
       return <DrawerNavigation />;
+    } else if (tabKey === 'tab') {
+      return <TabNavigation />;
     }
   };
 
@@ -29,17 +40,22 @@ function App() {
     <>
       <SafeAreaView style={styles.container}>
         {Object.keys(tabButtons).map(key => {
-          const {name, color} = tabButtons[key];
+          const {name} = tabButtons[key];
+
+          const backgroundColor = tab === key ? 'red' : '#dedede';
 
           return (
             <View style={styles.tabButtonWrap} key={key}>
-              <Button color={color} title={name} onPress={() => setTab(key)} />
+              <TouchableOpacity
+                style={{...styles.tabButtonWrap, backgroundColor}}
+                onPress={() => setTab(key)}>
+                <Text>{name}</Text>
+              </TouchableOpacity>
             </View>
           );
         })}
       </SafeAreaView>
-
-      {renderTabView(tab)}
+      <NavigationContainer>{renderTabView(tab)}</NavigationContainer>
     </>
   );
 }
@@ -50,7 +66,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#cecece',
   },
   tabButtonWrap: {
-    marginRight: 10,
+    padding: 5,
+    marginRight: 5,
   },
 });
 
