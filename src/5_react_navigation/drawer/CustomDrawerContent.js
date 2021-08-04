@@ -11,7 +11,7 @@ const CustomDrawerContent = props => {
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
       <DrawerItem
-        label="google open"
+        label="Google"
         onPress={() => Linking.openURL('https://www.google.co.kr/')}
       />
       <DrawerItem label="Help" onPress={() => alert('Link to help')} />

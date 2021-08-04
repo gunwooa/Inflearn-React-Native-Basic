@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from './HomeScreen';
 import NotificationsScreen from './NotificationsScreen';
 import CustomDrawerContent from './CustomDrawerContent';
+import MyDrawer from './MyDrawer';
 
 const Drawer = createDrawerNavigator();
 
@@ -21,7 +22,8 @@ export default function DrawerNavigation() {
           activeTintColor: 'red',
           activeBackgroundColor: 'black',
         }}
-        drawerContent={props => <CustomDrawerContent {...props} />}>
+        // drawerContent={props => <CustomDrawerContent {...props} />}
+        drawerContent={props => <MyDrawer {...props} />}>
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
       </Drawer.Navigator>
