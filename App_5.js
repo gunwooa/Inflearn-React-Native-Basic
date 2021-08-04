@@ -15,7 +15,7 @@ const tabButtons = {
 };
 
 function App() {
-  const [tab, setTab] = useState('stack');
+  const [tab, setTab] = useState('drawer');
 
   const renderTabView = tabKey => {
     if (tabKey === 'stack') {
