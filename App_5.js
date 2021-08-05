@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
+  Platform,
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import StackNavigation from './src/5_react_navigation/stack';
@@ -47,7 +48,8 @@ function App() {
           return (
             <View style={styles.tabButtonWrap} key={key}>
               <TouchableOpacity
-                style={{...styles.tabButtonWrap, backgroundColor}}
+                style={[styles.tabButtonWrap, {backgroundColor}]}
+                // style={{...styles.tabButtonWrap, backgroundColor}}
                 onPress={() => setTab(key)}>
                 <Text>{name}</Text>
               </TouchableOpacity>
@@ -63,7 +65,14 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: '#cecece',
+    ...Platform.select({
+      ios: {
+        backgroundColor: 'yellow',
+      },
+      android: {
+        backgroundColor: 'pink',
+      },
+    }),
   },
   tabButtonWrap: {
     padding: 5,

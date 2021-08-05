@@ -2,10 +2,10 @@ import React from 'react';
 
 import {View, Text, StyleSheet} from 'react-native';
 
-function SettingsScreen() {
+function MessageScreen() {
   return (
     <View style={styles.container}>
-      <Text>Settings!</Text>
+      <Text>Message!</Text>
     </View>
   );
 }
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SettingsScreen;
+export default MessageScreen;
