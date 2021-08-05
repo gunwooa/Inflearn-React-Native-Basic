@@ -4,19 +4,16 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import HomeScreen from './HomeScreen';
 import UserScreen from './UserScreen';
 import MessageScreen from './MessageScreen';
+import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 
 const Icon = {
-  Home: require('../../../assets/home.png'),
-  User: require('../../../assets/user.png'),
-  Message: require('../../../assets/messenger.png'),
+  Home: 'home-outline',
+  User: 'people-outline',
+  Message: 'mail-outline',
 };
 
 const TabBarIcon = (focused, name) => {
-  const styles = {
-    width: focused ? 30 : 20,
-    height: focused ? 30 : 20,
-  };
-  return <Image source={Icon[name]} style={styles} />;
+  return <Ionicons name={Icon[name]} size={focused ? 30 : 20} />;
 };
 
 const Tab = createBottomTabNavigator();

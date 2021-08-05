@@ -42,6 +42,7 @@
 		3C928A8A7E2F0C546EA30A56 /* Pods-reactNativeBasic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeBasic.release.xcconfig"; path = "Target Support Files/Pods-reactNativeBasic/Pods-reactNativeBasic.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reactNativeBasic/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8688F9EAD4C7BAB586621D5F /* libPods-reactNativeBasic-reactNativeBasicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeBasic-reactNativeBasicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B677C3326BBB0FA0082E6D9 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		CCDC9DBDDDDF66E86AF308A5 /* Pods-reactNativeBasic-reactNativeBasicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeBasic-reactNativeBasicTests.release.xcconfig"; path = "Target Support Files/Pods-reactNativeBasic-reactNativeBasicTests/Pods-reactNativeBasic-reactNativeBasicTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -91,13 +92,13 @@
 				1127007D8070A2EA14F048CA /* Pods-reactNativeBasic-reactNativeBasicTests.debug.xcconfig */,
 				CCDC9DBDDDDF66E86AF308A5 /* Pods-reactNativeBasic-reactNativeBasicTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* reactNativeBasic */ = {
 			isa = PBXGroup;
 			children = (
+				9B677C3026BBB0AA0082E6D9 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -147,6 +148,14 @@
 				00E356EE1AD99517003FC87E /* reactNativeBasicTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9B677C3026BBB0AA0082E6D9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B677C3326BBB0FA0082E6D9 /* Ionicons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
