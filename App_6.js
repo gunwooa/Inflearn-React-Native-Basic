@@ -10,7 +10,7 @@ function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="ImagePicker"
+        initialRouteName="Contacts"
         tabBarOptions={{
           activeBackgroundColor: 'skyblue',
           activeTintColor: 'blue',
