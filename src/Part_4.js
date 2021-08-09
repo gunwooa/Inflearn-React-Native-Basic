@@ -9,12 +9,12 @@ import {
   Image,
 } from 'react-native';
 
-import Input from './src/4_react_native_component/Input';
-import NumList from './src/4_react_native_component/NumList';
-import MyPicker from './src/4_react_native_component/MyPicker';
-import MySlider from './src/4_react_native_component/MySlider';
-import MyModal from './src/4_react_native_component/MyModal';
-import iuImgSrc from './assets/iu.jpeg';
+import Input from './4_react_native_component/Input';
+import NumList from './4_react_native_component/NumList';
+import MyPicker from './4_react_native_component/MyPicker';
+import MySlider from './4_react_native_component/MySlider';
+import MyModal from './4_react_native_component/MyModal';
+import iuImgSrc from '../assets/iu.jpeg';
 
 const App = () => {
   const [myTextInput, setMyTextInput] = useState('');

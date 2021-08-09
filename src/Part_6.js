@@ -2,8 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import ImagePickerPage from './src/6_phone_resource/ImagePickerPage';
-import ContactsPage from './src/6_phone_resource/ContactsPage';
+import ImagePickerPage from './6_phone_resource/ImagePickerPage';
+import ContactsPage from './6_phone_resource/ContactsPage';
 
 const Tab = createBottomTabNavigator();
 function App() {
